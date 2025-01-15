@@ -1,10 +1,3 @@
-"""
-Um comando para criar o id da url encurtada
-    program --shorten / -s <url>
-Um comando que recebe um id e devolve a url original
-    program --resolve / -r <id>
-"""
-
 import argparse
 import core
 
@@ -23,4 +16,8 @@ args = parser.parse_args()
 if args.shorten:
     print(core.create_url(args.shorten))
 elif args.resolve:
-    print(core.search_url(args.resolve))
+    url = core.search_url(args.resolve)
+    if url:
+        print(url)
+    else:
+        print(f"ID '{args.resolve}' not found")
