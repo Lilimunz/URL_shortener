@@ -23,6 +23,9 @@ Example
 >>> search_url('738ddf35b3')
 'http://www.google.com'
 
+>>> search_url('foobar')
+
+
 """
 
 from hashlib import sha1
