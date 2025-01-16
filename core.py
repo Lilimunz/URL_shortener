@@ -40,5 +40,5 @@ def shortened_url(url: str) -> str:
 def create_url(url: str) -> str:
     return db.create(shortened_url(url), url)
 
-def search_url(id: str) -> str:
+def search_url(id: str) -> str | None:
     return db.find(id)
