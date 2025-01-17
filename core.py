@@ -38,7 +38,7 @@ def shortened_url(url: str) -> str:
     return digest[:10]
 
 def create_url(url: str) -> str:
-    return db.create(shortened_url(url), url)
+    return db.context.create(shortened_url(url), url)
 
 def search_url(id: str) -> str | None:
-    return db.find(id)
+    return db.context.find(id)
