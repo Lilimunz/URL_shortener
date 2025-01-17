@@ -21,3 +21,5 @@ elif args.resolve:
         print(url)
     else:
         print(f"ID '{args.resolve}' not found")
+else:
+    parser.print_help()
